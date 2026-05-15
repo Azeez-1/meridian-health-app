@@ -1,0 +1,11 @@
+# Meridian Health Services — Python dependencies
+# NOTE: requests==2.25.0 is intentionally pinned to an old version.
+# pip-audit will flag CVE-2023-32681 (SSRF vulnerability).
+# The fix is to update to requests>=2.31.0
+# This is part of the security scanning exercise.
+
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+requests==2.25.0
+python-multipart==0.0.6
