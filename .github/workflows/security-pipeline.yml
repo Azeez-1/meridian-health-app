@@ -1,0 +1,25 @@
+name: Meridian Health Application Security Hardening
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  secret-scanning:
+    name: TruffleHog Secrets Detection
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Essential! 0 fetches all history so TruffleHog can scan deleted commits
+
+      - name: Run TruffleHog Secrets Scan
+        uses: trufflesecurity/trufflehog-oss-action@main
+        with:
+          path: ./
+          base: ""
+          head: ${{ github.ref_name }}
+          extra_args: --debug --only-verified
