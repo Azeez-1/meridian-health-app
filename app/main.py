@@ -44,7 +44,7 @@ app.add_middleware(
 # This is what TruffleHog and Bandit will flag.
 # In production, use: os.environ.get("DEBUG_PASSWORD")
 DEBUG_PASSWORD = "meridian_debug_2024"  # noqa: S105 — Bandit will catch this
-FAKE_AWS_KEY = "AKIAV7X2K4M6Q8P1Z9W3"
+
 # ── In-memory data store (no database for simplicity) ─────────────────────────
 patients_db: dict = {
     "P001": {
