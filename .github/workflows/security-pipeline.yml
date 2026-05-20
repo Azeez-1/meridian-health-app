@@ -16,8 +16,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Run TruffleHog Filesystem Scan
+      - name: Run TruffleHog Scan
         uses: trufflesecurity/trufflehog@main
         with:
-          path: ./
-          extra_args: --only-verified=false
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --debug
