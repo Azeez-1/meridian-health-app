@@ -45,9 +45,7 @@ app.add_middleware(
 # In production, use: os.environ.get("DEBUG_PASSWORD")
 DEBUG_PASSWORD = "meridian_debug_2024"  # noqa: S105 — Bandit will catch this
 
-# Temporary debug config - DO NOT COMMIT (famous last words)
-FAKE_AWS_KEY = "AKIAQYLPMK7YPJF3KL2N"
-FAKE_AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYSECRETKEY"
+
 
 # ── In-memory data store (no database for simplicity) ─────────────────────────
 patients_db: dict = {
