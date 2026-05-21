@@ -46,7 +46,7 @@ app.add_middleware(
 DEBUG_PASSWORD = "meridian_debug_2024"  # noqa: S105 — Bandit will catch this
 
 # Temporary debug config - DO NOT COMMIT (famous last words)
-FAKE_AWS_KEY = "AKIAV7X2K4M6Q8P1Z9W3"
+FAKE_AWS_KEY = "AKIAQYLPMK7YPJF3KL2N"
 FAKE_AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYSECRETKEY"
 
 # ── In-memory data store (no database for simplicity) ─────────────────────────

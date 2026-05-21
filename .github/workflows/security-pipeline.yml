@@ -20,6 +20,6 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ""
-          head: ${{ github.ref_name }}
+          base: ${{ github.event.before }}
+          head: ${{ github.sha }}
           extra_args: --debug
