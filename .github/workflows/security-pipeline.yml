@@ -23,3 +23,23 @@ jobs:
           base: ${{ github.event.before }}
           head: ${{ github.sha }}
           extra_args: --debug
+          
+          
+  sast-scanning:
+    name: Bandit SAST Scan
+    runs-on: ubuntu-latest
+    needs: secret-scanning
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Bandit
+        run: pip install bandit
+
+      - name: Run Bandit SAST
+        run: bandit -r app/ -ll -ii -f txt
