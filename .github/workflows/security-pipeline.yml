@@ -42,4 +42,4 @@ jobs:
         run: pip install bandit
 
       - name: Run Bandit SAST
-        run: bandit -r ./app -ll -ii
+        run: python -m bandit -r app/ -l -i -f txt
