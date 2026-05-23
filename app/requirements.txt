@@ -5,7 +5,10 @@
 # This is part of the security scanning exercise.
 
 fastapi>=0.109.1
-uvicorn==0.24.0
-pydantic==2.5.0
+uvicorn>=0.30.0
+pydantic>=2.5.0
 requests>=2.33.0
-starlette>=1.0.1
+python-multipart>=0.0.27
+idna>=3.15
+starlette>=0.47.2
+urllib3>=2.6.3
